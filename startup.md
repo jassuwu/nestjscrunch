@@ -18,3 +18,12 @@ Then we included Prisma in our project
     npm i @prisma/client
     npx prisma init
 ```
+
+We wrote our schema in the schema.prisma file and then we ran the following command to generate the client
+
+```
+    npx prisma migrate dev --name init
+```
+
+
+
