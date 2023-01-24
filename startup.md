@@ -90,3 +90,30 @@ Then we installed passport-jwt and @nestjs/jwt with types
     npm i passport-jwt @nestjs/jwt
     npm i -D @types/passport-jwt
 ```
+
+Adding AuthGuard to the user.controller.ts and jwt.strategy.ts
+
+```
+    @UseGuards(AuthGuard('jwt'))
+    PassportStrategy(Strategy, 'jwt')
+```
+
+Write a validate function in the jwt.strategy.ts
+
+```
+    async validate(payload: any) {
+        return { userId: payload.sub, username: payload.username };
+    }
+```
+
+Abstract the guard into a separate file
+
+
+Make a get-user.decorator.ts file
+
+
+Install pactumJS for e2e testing
+
+```
+    npm i -D pactum
+```
