@@ -134,3 +134,17 @@ We are moving onto write a CRUD for bookmarks
 Initialized the bookmark controller and services. 
 Then write the basic CRUD skeleton for the bookmark controller and service
 Then we make DTOs for the bookmark controller
+
+We wrote the CRUD for the bookmark controller and service and ended it there.
+
+
+Optionally, I tried to add swagger to the API. I followed the instructions here: https://docs.nestjs.com/openapi/introduction
+
+so install using 
+
+```
+    npm i @nestjs/swagger
+```
+
+
+Added a healthcheck route @Get() to the healthcheck.controller.ts
