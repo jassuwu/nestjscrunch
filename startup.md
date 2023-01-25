@@ -148,3 +148,20 @@ so install using
 
 
 Added a healthcheck route @Get() to the healthcheck.controller.ts
+
+Added Tags to the swagger docs
+
+```
+    @ApiTags('healthcheck')
+```
+
+Added Security to the swagger docs
+
+```
+    @ApiSecurity('jwt')
+    @UseGuards(AuthGuard('jwt'))
+```
+
+Changed the main.ts to include these changes.
+
+Good luck! I hope this helps.
