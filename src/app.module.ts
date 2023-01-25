@@ -4,8 +4,9 @@ import { AuthModule } from './auth/auth.module';
 import { BookmarkModule } from './bookmark/bookmark.module';
 import { UserModule } from './user/user.module';
 import { PrismaModule } from './prisma/prisma.module';
+import { HealthcheckModule } from './healthcheck/healthcheck.module';
 
 @Module({
-  imports: [ConfigModule.forRoot({ isGlobal: true, }), AuthModule, BookmarkModule, UserModule, PrismaModule],
+  imports: [ConfigModule.forRoot({ isGlobal: true, }), AuthModule, BookmarkModule, UserModule, PrismaModule, HealthcheckModule],
 })
 export class AppModule { }
