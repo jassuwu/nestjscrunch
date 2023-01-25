@@ -117,3 +117,20 @@ Install pactumJS for e2e testing
 ```
     npm i -D pactum
 ```
+
+Table deletion tips: The deletion of a table can be cascaded by addding options to the foreign key. For example, if we have a table called user and a table called post, and we want to delete a user, we can add the following to the user table
+
+```
+    onDelete: Cascade
+```
+
+
+We skip the testing part for now. We will come back to it later.
+
+We created editUser in the user.service.ts
+
+We are moving onto write a CRUD for bookmarks
+
+Initialized the bookmark controller and services. 
+Then write the basic CRUD skeleton for the bookmark controller and service
+Then we make DTOs for the bookmark controller
