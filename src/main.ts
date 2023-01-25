@@ -12,6 +12,13 @@ async function bootstrap() {
     .setTitle('NestJSCrunch API')
     .setDescription('NestJSCrunch API docs')
     .setVersion('1.0')
+    .addBearerAuth({
+      type: 'http',
+      scheme: 'bearer',
+      name: "JWT",
+      description: "Provide the JWT Bearer token: ",
+      in: "header",
+    }, "jwt")
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
